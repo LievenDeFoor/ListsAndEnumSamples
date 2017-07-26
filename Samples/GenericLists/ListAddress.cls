@@ -29,6 +29,6 @@ USING Progress.Lang.*                 FROM PROPATH .
 CLASS Samples.GenericLists.ListAddress
     INHERITS GenericList: 
 
-    {Consultingwerk/Framework/Base/GenericList.i Address}
+    {Consultingwerk/Framework/Base/GenericList.i Address ListAddress}
  
 END CLASS.

@@ -38,12 +38,13 @@ ROUTINE-LEVEL ON ERROR UNDO, THROW.
 USING Progress.Lang.*.
 USING Consultingwerk.Framework.Base.GenericList.
 USING Consultingwerk.NameValuePair.
+USING Consultingwerk.ListNameValuePair.
 
 CLASS Consultingwerk.ListNameValuePair 
     INHERITS GenericList
     {&SERIALIZABLE}: 
 
-    { Consultingwerk/Framework/Base/GenericList.i NameValuePair }
+    { Consultingwerk/Framework/Base/GenericList.i NameValuePair ListNameValuePair }
 
     /*------------------------------------------------------------------------------
         Purpose: Returns if the ListNameValuePair contains a pair this the given Name 

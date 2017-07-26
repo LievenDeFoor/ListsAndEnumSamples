@@ -28,6 +28,6 @@ USING Progress.Lang.*                 FROM PROPATH .
 CLASS Samples.GenericLists.ListCustomer 
     INHERITS GenericList: 
 
-    {Consultingwerk/Framework/Base/GenericList.i Customer}
+    {Consultingwerk/Framework/Base/GenericList.i Customer ListCustomer}
  
 END CLASS.

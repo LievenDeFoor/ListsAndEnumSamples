@@ -28,6 +28,6 @@ USING Progress.Lang.*                 FROM PROPATH .
 CLASS Samples.Enums.ListAddress
     INHERITS GenericList: 
 
-    {Consultingwerk/Framework/Base/GenericList.i Address}
+    {Consultingwerk/Framework/Base/GenericList.i Address ListAddress}
  
 END CLASS.

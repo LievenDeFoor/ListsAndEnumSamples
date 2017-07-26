@@ -63,6 +63,19 @@
     END METHOD.
     
     /*------------------------------------------------------------------------------
+        Purpose: Adds an existing List to this List
+        Notes:
+        @param Range An List of items of the same type as this List
+    ------------------------------------------------------------------------------*/
+    METHOD PUBLIC VOID AddRange(Range AS {2}):
+
+        { Consultingwerk/foreachABL.i {1} Item in Range }
+            THIS-OBJECT:Add(Item).
+        END.
+
+    END METHOD. /* AddRange */
+    
+    /*------------------------------------------------------------------------------
         Purpose: Retrieves an item from the generic List                                                                     
         Notes:   CAST's the element from the underlying Progress.Lang.Object based
                  list 
@@ -102,4 +115,24 @@
         RETURN oArray . 
         
     END METHOD . 
+    
+    /*------------------------------------------------------------------------------
+        Purpose: Returns a shallow copy of the list
+        Notes:
+        @return A shallow copy of the list
+    ------------------------------------------------------------------------------*/
+    METHOD PUBLIC {2} ShallowCopy():
+
+        DEFINE VARIABLE ListCopy AS {2} NO-UNDO.
+
+        /* --------------------------------------------------------------------- */
+
+        ASSIGN ListCopy = NEW {2}().
+
+        ListCopy:AddRange(THIS-OBJECT).
+
+        RETURN ListCopy.
+
+    END METHOD.
+
     
